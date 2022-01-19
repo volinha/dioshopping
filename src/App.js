@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import store from './components/store';
 import Routes from './routes';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 const App = () => {
   
@@ -17,6 +18,7 @@ const App = () => {
         <Router>
           <Header />
           <Routes />
+          <Footer />
         </Router>
     </Provider>
   )
