@@ -8,33 +8,47 @@ const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
       marginTop: '5px',
+      minHeight: '100vh'
     },
     paper: {
-      padding: theme.spacing(2),
-      textAlign: 'center'
+      padding: '8px',
+      marginLeft: '8px',
+      textAlign: 'left',
+      backgroundColor: '#DDD',
+      border: '1px solid #AAA',
     },
+    titleCategories: {
+        fontFamily: "'Righteous', cursive",
+        color: 'var(--primary)',
+        textAlign: 'left'
+    },
+    list: {
+        display: 'flex',
+        flexDirection: 'column',
+        textAlign: 'left',
+    }
   }));
 
 const HomePage = () => {
     const products = useSelector(state => state.products)
     const classes = useStyles();
 
-    const categorys = products.map(
+    const categories = products.map(
         category => {
             const container = { };
-            container['id'] = category.id_categorys;
-            container['name'] = category.name_categorys;
+            container['id'] = category.id_categories;
+            container['name'] = category.name_categories;
             return container;
         }
     )
 
-    const category = categorys.map(JSON.stringify)
+    const category = categories.map(JSON.stringify)
                     .filter(function(item, index, arr){
                         return arr.indexOf(item, index + 1) === -1;
                     })
                     .map(JSON.parse)
 
-    const arrayCategory = categorys.map(category => category.name)
+    const arrayCategory = categories.map(category => category.name)
     let count = { };
 
     for(let i = 0; i < arrayCategory.length; i++){
@@ -46,12 +60,12 @@ const HomePage = () => {
 
     return(
         <Grid container spacing={3} className={classes.root}>
-            <Grid item xs={3}>
+            <Grid item xs={2}>
                 <Paper className={classes.paper}>
-                    <Typography variant='h5'>
+                    <Typography variant='h5' className={classes.titleCategories}>
                         Categorias
                     </Typography>
-                    <List>
+                    <List className={classes.list}>
                         {category.map(
                             category => {
                                 return (
