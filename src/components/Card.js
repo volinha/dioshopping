@@ -51,15 +51,17 @@ const Card = ({ product, children }) => {
         <Grid item xs={3}>
             <StyledPaper>
                 <Grid container direction='column' justifyContent="flex-end" alignItems="center">
-                    <Grid item>
+                    <Grid item xs>
                         <img width="140px" height="140px" src={product.image} alt={product.name_product} />
-                        <Rating name="read-only" value={product.rating} precision={0.5} readOnly />
+                        
                         <ProductTitle>
                             {children}
                         </ProductTitle>
+                        <Rating name="read-only" value={product.rating} precision={0.5} readOnly />
                         <Typography variant='subtitle1'>
                             R$ {product.price.toFixed(2)}
                         </Typography>
+                        
                     </Grid>
                     <CardButton
                         variant="contained"
