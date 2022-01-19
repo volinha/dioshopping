@@ -1,6 +1,10 @@
-# SportShop
+# SportShop ⚽
 
 Frontend criado para integração com backend disponível em [sportshop-api](https://github.com/volinha/sportshop-api).
+
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img src="/public/images/preview-website.png" width="800px"/>
+</p>
 
 ## Instruções
 ### Frontend
