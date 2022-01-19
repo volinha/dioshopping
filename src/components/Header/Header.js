@@ -5,6 +5,8 @@ import Cart from '../Cart';
 import styled from 'styled-components';
 import Search from '../Search/Search';
 
+import './responsive.css';
+
 const HeaderWrapper = styled.div`
     display: flex;
 
@@ -41,25 +43,38 @@ const HeaderLinks = styled(Link)`
     }
 `
 
+const HomeLink = styled(Link)`
+    text-decoration: none;
+    color: var(--background);
+
+    &:hover{
+        text-decoration: none;
+        color: var(--background);
+    }
+`
+
 const Header = () => {
+
     return (
         <HeaderWrapper>
             <Grid
                 container
                 direction="row"
-                justifyContent="space-between"
+                justifyContent="flex-end"
                 alignItems="center"
                 columns={12}
             >
-                <Grid item xs={3}>
+                <Grid item md={3} xs={7}>
                     <HeaderTitle>
-                        SPORTSHOP
+                        <HomeLink to='/'>
+                            SPORTSHOP
+                        </HomeLink>
                     </HeaderTitle>
                 </Grid>
-                <Grid item xs={7}>
+                <Grid item md={0} xs={7} className="searchbar">
                     <Search />
                 </Grid>
-                <Grid item xs={2}>
+                <Grid item md={2} xs={5} justifyContent="flex-end">
                     <HeaderLinks to="/">
                         <Button>Perfil</Button>
                     </HeaderLinks>
