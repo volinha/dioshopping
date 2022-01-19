@@ -1,6 +1,6 @@
 # SportShop ⚽
 
-Frontend criado para integração com backend disponível em [sportshop-api](https://github.com/volinha/sportshop-api).
+Frontend criado em React para integração com backend disponível em [sportshop-api](https://github.com/volinha/sportshop-api), feito em [Express](https://expressjs.com/pt-br/), banco de dados [SQLite](https://www.sqlite.org/index.html) e ORM [TypeORM](https://typeorm.io).
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
   <img src="/public/images/preview-website.png" width="800px"/>
@@ -32,7 +32,20 @@ Instale e rode o servidor
 - Alterar quantidade de itens;
 - Enviar e excluir mensagens na aba Contato;
 
-#
+## Principais Ferramentas
+
+### Frontend
+- ReactJS
+- Styled Components
+- Material-UI
+- JavaScript
+
+### Backend
+- Express
+- NodeJS
+- TypeORM
+- TypeScript
+
 
 Forked from [nathyts/dioshopping](https://github.com/nathyts/dioshopping)
 
