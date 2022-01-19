@@ -49,7 +49,7 @@ const Contatos = () => {
         const response = await fetch(url);
         const data = await response.json();
         setMessage(data);
-    }, [render])
+    }, [render, url])
 
     function validateEmail(value) {
         var input = document.createElement('input');

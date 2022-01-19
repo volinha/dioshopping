@@ -50,7 +50,7 @@ const Card = ({ product, children }) => {
     return (
         <Grid item xs={3}>
             <StyledPaper>
-                <Grid container direction='column' justifyContent="flex-end" alignItems="center">
+                <Grid container direction='column' alignItems="center">
                     <Grid item xs>
                         <img width="140px" height="140px" src={product.image} alt={product.name_product} />
                         
